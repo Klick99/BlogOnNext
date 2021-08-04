@@ -19,7 +19,7 @@ const Posts = () => {
             List of Posts
          </h1>
          <article>
-            {posts.map(post =>
+            {posts.map((post:any) =>
                <section key={post.id}>
                   <Link href={`/posts/${post.id}`}>
                      <h5>{post.title}</h5>
@@ -33,3 +33,12 @@ const Posts = () => {
 }
 
 export default Posts;
+
+/*export async function getStaticProps() {
+   const posts = useSelector((state: AppStateType) => state.postsReducer.posts)
+   const users = await response.json()
+
+   return {
+      props: {users}, // will be passed to the page component as props
+   }
+}*/

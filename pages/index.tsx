@@ -8,11 +8,9 @@ import {store} from "../redux/redux-store";
 
 export default function Home() {
   return (
-     <Provider store={store}>
        <MainContainer>
          <Posts/>
        </MainContainer>
-     </Provider>
   )
 }
 
